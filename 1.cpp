@@ -13,67 +13,65 @@
 #define right 77
 int move = 72;
 
-/*ÕâÊÇÒ»¸öÊ§°ÜµÄÌ°³ÔÉß
-Áã»ù´¡ºÜÄÑÔÚ¾ÅÌìÄÚÍê³Éµ«²¢²»ÊÇ²»¿ÉÄÜ
-Ö»ÊÇÎÒ¸öÈËÊ§°ÜÁË
+/*è¿™æ˜¯ä¸€ä¸ªå¤±è´¥çš„è´ªåƒè›‡
+é›¶åŸºç¡€å¾ˆéš¾åœ¨ä¹å¤©å†…å®Œæˆä½†å¹¶ä¸æ˜¯ä¸å¯èƒ½
+åªæ˜¯æˆ‘ä¸ªäººå¤±è´¥äº†
 
-ÎÒ´ÓÉÏÖÜÁù¿ªÊ¼¿´moocÑ§Ï°
-Ñ§ÁË×î»ù±¾µÄ¼ÆËã¡¢ÅĞ¶Ï¡¢Ñ­»·¡¢Êı×é
-È»ºó»¨ÁË°ëÌìÊ±¼äÅªÃ÷°×git
-ÔÙºÄ·ÑÁ½ÌìµÄÊ±¼äÎªÁË×öºÃui½çÃæµÄ»¥¶¯È¥Ñ§easyx
-Ê¼ÖÕÊÇ³äÂúĞËÈ¤ºÍ¸É¾¢µÄ
+æˆ‘ä»ä¸Šå‘¨å…­å¼€å§‹çœ‹moocå­¦ä¹ 
+å­¦äº†æœ€åŸºæœ¬çš„è®¡ç®—ã€åˆ¤æ–­ã€å¾ªç¯ã€æ•°ç»„
+ç„¶åèŠ±äº†åŠå¤©æ—¶é—´å¼„æ˜ç™½git
+å†è€—è´¹ä¸¤å¤©çš„æ—¶é—´ä¸ºäº†åšå¥½uiç•Œé¢çš„äº’åŠ¨å»å­¦easyx
+å§‹ç»ˆæ˜¯å……æ»¡å…´è¶£å’Œå¹²åŠ²çš„
 
-µ«ÓÎÏ·µÄÔËĞĞÔ¶Ô¶Ã»ÓĞÎÒÏëµÄÄÇÃ´¼òµ¥
-ÎªÁËËÙ³ÉÎÒÓĞĞ©ÌøÔ¾µØÑ§Ï°
-µ±ÎÒ¿ªÊ¼½Ó´¥Á´±í
-È»ºó²ÅÖªµÀÒªÑ§Ö¸Õë
-Ñ§Ï°¹ı³ÌÖĞÓÖÅöµ½ÁËstructµÈÃ»½²¹ıµÄÖ¸Áî
-¾ÍÊÇÔ½Ñ§Ô½²»»áµÄ¸Ğ¾õ
+ä½†æ¸¸æˆçš„è¿è¡Œè¿œè¿œæ²¡æœ‰æˆ‘æƒ³çš„é‚£ä¹ˆç®€å•
+ä¸ºäº†é€Ÿæˆæˆ‘æœ‰äº›è·³è·ƒåœ°å­¦ä¹ 
+å½“æˆ‘å¼€å§‹æ¥è§¦é“¾è¡¨
+ç„¶åæ‰çŸ¥é“è¦å­¦æŒ‡é’ˆ
+å­¦ä¹ è¿‡ç¨‹ä¸­åˆç¢°åˆ°äº†structç­‰æ²¡è§è¿‡çš„æŒ‡ä»¤
+è™½ç„¶é‡åˆ°ä¸€ä¸ªå­¦ä¸€ä¸ª
+å°±æ˜¯è¶Šå­¦è¶Šä¸ä¼šçš„æ„Ÿè§‰
 
-×öÓÎÏ·µÄĞËÈ¤ÊÇÓĞµÄ
-µ«ÎÒ¶ÔÍæÓÎÏ·µÄĞËÈ¤Ò²ÊÇÕæµÄ
-ÀÁÊÇÔ­×ï
-µ±ÎÒÒâÊ¶µ½Ò»µãµãÑ§ÊÇ¼¸ºõ²»¿ÉÄÜ°´Ê±Íê³Éºó
-ÎÒ¾ÍËÙÑ§¡¢ÌøÑ§
-¿´ÍøÉÏ×î¼òµ¥Ì°³ÔÉßµÄÔ´´úÂëÈ»ºóÑĞ¾¿
-¿ÉÎÊÌâÔ´Ô´²»¶Ï
+åšæ¸¸æˆçš„å…´è¶£æ˜¯æœ‰çš„
+ä½†æˆ‘å¯¹ç©æ¸¸æˆçš„å…´è¶£ä¹Ÿæ˜¯çœŸçš„
+æ‡’æ˜¯åŸç½ª
+å½“æˆ‘æ„è¯†åˆ°ä¸€ç‚¹ç‚¹å­¦æ˜¯å‡ ä¹ä¸å¯èƒ½æŒ‰æ—¶å®Œæˆå
+æˆ‘å°±é€Ÿå­¦ã€è·³å­¦
+çœ‹ç½‘ä¸Šæœ€ç®€å•è´ªåƒè›‡çš„æºä»£ç ç„¶åç ”ç©¶
+å¯é—®é¢˜æºæºä¸æ–­
 
-×ÜÖ®
-ÎÒÊ§°ÜÁË
-µ«ÎÒÈÔÈ»¸ĞĞ»MEMO³ÌĞò×é¸øÎÒ¶şÃæºÍÊµÏ°ÆÚµÄ»ú»á£¨ÎÒ±¾ÊÇÒ»Ãæ¾Í±»Ë¢µÄ£©
-Õâ¸öĞÇÆÚÎÒ¹ıµÄ¸ñÍâ³äÊµ
-²»³öÒâÍâ
-ÎÒÃ÷Ìì»¹»ØÀ´
-²»¹ı²»ÔÙÊÇÁã»ù´¡ÁË
+æ€»ä¹‹
+æˆ‘å¤±è´¥äº†
+ä½†æˆ‘ä»ç„¶æ„Ÿè°¢MEMOç¨‹åºç»„ç»™æˆ‘äºŒé¢å’Œå®ä¹ æœŸçš„æœºä¼šï¼ˆæˆ‘æœ¬æ˜¯ä¸€é¢å°±è¢«åˆ·çš„ï¼‰
+è¿™ä¸ªæ˜ŸæœŸæˆ‘è¿‡çš„æ ¼å¤–å……å®
 
-£¨Õâ¸ö³ÌĞò²»¶®ÄÄÀï³öÎÊÌâÁË£¬Ò²Ã»ÓĞ³ö´íÌáÊ¾£¬ÖØÆô¶à´ÎÒ²ÎŞÓÃ£©
+ï¼ˆè¿™ä¸ªç¨‹åºä¸æ‡‚å“ªé‡Œå‡ºé—®é¢˜äº†ï¼Œä¹Ÿæ²¡æœ‰å‡ºé”™æç¤ºï¼Œé‡å¯å¤šæ¬¡ä¹Ÿæ— ç”¨ï¼‰
 */
 
 
-//¾ö¶¨ÓÎÏ·¹Ø±ÕÓë·ñ
+//å†³å®šæ¸¸æˆå…³é—­ä¸å¦
 int abc = 0;
 
 void start()
 {
-    //´´½¨´°¿Ú
+    //åˆ›å»ºçª—å£
     initgraph(800, 600,NULL);
-    //Ö÷½çÃæ±³¾°Í¼Æ¬
+    //ä¸»ç•Œé¢èƒŒæ™¯å›¾ç‰‡
     IMAGE logo_img;
     loadimage(&logo_img, _T("logo1.jpg"), 800, 600);
     putimage(0, 0, &logo_img);
-    //Ñ¡ÏîÏÔÊ¾
+    //é€‰é¡¹æ˜¾ç¤º
     setlinecolor(WHITE);
     setfillcolor(BLACK);
-    settextstyle(25, 0, _T("ËÎÌå"));
+    settextstyle(25, 0, _T("å®‹ä½“"));
 
     fillrectangle(349, 550, 451, 490);
-    outtextxy(350, 510, _T("ÍË³öÓÎÏ·"));
+    outtextxy(350, 510, _T("é€€å‡ºæ¸¸æˆ"));
 
     fillrectangle(349, 450, 451, 390);
-    outtextxy(350, 410, _T("ÓÎÏ·°ïÖú"));
+    outtextxy(350, 410, _T("æ¸¸æˆå¸®åŠ©"));
 
     fillrectangle(349, 350, 451, 290);
-    outtextxy(350, 310, _T("¿ªÊ¼ÓÎÏ·"));
+    outtextxy(350, 310, _T("å¼€å§‹æ¸¸æˆ"));
    
     MOUSEMSG mouse;
     IMAGE illustrate_img;
@@ -85,7 +83,7 @@ void start()
         mouse = GetMouseMsg();
         switch (mouse.uMsg) {
         case WM_LBUTTONDOWN:
-            //ÓÎÏ·°ïÖú
+            //æ¸¸æˆå¸®åŠ©
             if ((mouse.x > 349 && mouse.x < 451) &&
                 (mouse.y > 390 && mouse.y < 450)) {
                 putimage(0, 0, &illustrate_img);
@@ -96,26 +94,26 @@ void start()
 
                 setlinecolor(WHITE);
                 setfillcolor(BLACK);
-                settextstyle(25, 0, _T("ËÎÌå"));
+                settextstyle(25, 0, _T("å®‹ä½“"));
 
                 fillrectangle(349, 550, 451, 490);
-                outtextxy(350, 510, _T("ÍË³öÓÎÏ·"));
+                outtextxy(350, 510, _T("é€€å‡ºæ¸¸æˆ"));
 
                 fillrectangle(349, 450, 451, 390);
-                outtextxy(350, 410, _T("ÓÎÏ·°ïÖú"));
+                outtextxy(350, 410, _T("æ¸¸æˆå¸®åŠ©"));
 
                 fillrectangle(349, 350, 451, 290);
-                outtextxy(350, 310, _T("¿ªÊ¼ÓÎÏ·"));  
+                outtextxy(350, 310, _T("å¼€å§‹æ¸¸æˆ"));  
                     
             }
-            //¿ªÊ¼ÓÎÏ·
+            //å¼€å§‹æ¸¸æˆ
             if ((mouse.x > 349 && mouse.x < 451) &&
                 (mouse.y > 290 && mouse.y < 350)) {
                 cleardevice();
                 o = 0;
                 break;
             }
-            //ÍË³öÓÎÏ·
+            //é€€å‡ºæ¸¸æˆ
             if ((mouse.x > 349 && mouse.x < 451) &&
                 (mouse.y > 450 && mouse.y < 550)) {
                 cleardevice();
@@ -129,7 +127,7 @@ void start()
     
 }
 
-//·ÖÊıºÍµÈ¼¶
+//åˆ†æ•°å’Œç­‰çº§
 void print_score_grade(int nodemun,int grade)
 {
    
@@ -138,7 +136,7 @@ void print_score_grade(int nodemun,int grade)
 
    
     settextcolor(RGB(0, 255, 255));
-    settextstyle(20, 0, _T("ËÎÌå"));
+    settextstyle(20, 0, _T("å®‹ä½“"));
 
     setfillcolor(RED);
     solidrectangle(580, 150, 700, 170);
@@ -152,7 +150,7 @@ void print_score_grade(int nodemun,int grade)
     system("pause");
 }
 
-//Á´±í
+//é“¾è¡¨
 typedef struct ac
 {
     int x;
@@ -173,7 +171,7 @@ typedef struct ac
     return head;
 }
 
- //Éß
+ //è›‡
  void create(lianbiao *head, int *end)
  {
      lianbiao *p;
@@ -185,7 +183,7 @@ typedef struct ac
          p = p->next;
      }
      solidrectangle(p->x, p->y, p->x + 10, p->y + 10);
-     if (end != NULL)//Ä¨È¥ÉÏÒ»¸öµÄÉßÎ²
+     if (end != NULL)//æŠ¹å»ä¸Šä¸€ä¸ªçš„è›‡å°¾
      {
          setfillcolor(RED);
          solidrectangle(end[0], end[1], end[0] + 10, end[1] + 10);
@@ -203,12 +201,12 @@ typedef struct ac
          exit(0);
      current = head;
      new_node->next = head;
-     while (current->next != NULL)//Ñ°ÕÒÉßÎ²
+     while (current->next != NULL)//å¯»æ‰¾è›‡å°¾
      {
          current = current->next;
      }
 
-     switch (move)//Ìí¼ÓĞÂµÄÍ·½Úµã£¬É¾³ıÎ²½Úµã
+     switch (move)//æ·»åŠ æ–°çš„å¤´èŠ‚ç‚¹ï¼Œåˆ é™¤å°¾èŠ‚ç‚¹
      {
      case up:
          new_node->x = head->x;
@@ -244,12 +242,12 @@ typedef struct ac
          break;
      }
      p = new_node;
-     for (i = 1; i < nodemun; i++)//Ñ°ÕÒĞÂµÄÉßÎ²
+     for (i = 1; i < nodemun; i++)//å¯»æ‰¾æ–°çš„è›‡å°¾
      {
          p = p->next;
      }
-     p->next = NULL;//½«ĞÂµÄÎ²½ÚµãÖ¸ÏòNULL
-     return new_node;//·µ»ØĞÂµÄÍ·½Úµã
+     p->next = NULL;//å°†æ–°çš„å°¾èŠ‚ç‚¹æŒ‡å‘NULL
+     return new_node;//è¿”å›æ–°çš„å¤´èŠ‚ç‚¹
  }
 
  void chose_speed(int nodemun)
@@ -289,11 +287,11 @@ typedef struct ac
          exit(0);
      current = head;
 
-     if (*nodemun > 1)//ÉßÓĞÁ½¸ö½Úµã¼°ÒÔÉÏ
+     if (*nodemun > 1)//è›‡æœ‰ä¸¤ä¸ªèŠ‚ç‚¹åŠä»¥ä¸Š
      {
          while (current->next != NULL)
          {
-             if (i == *nodemun - 1)//Ñ°ÕÒµ¹ÊıµÚ¶ş¸ö½Úµã£¬²¢±£´æÆäÖµ
+             if (i == *nodemun - 1)//å¯»æ‰¾å€’æ•°ç¬¬äºŒä¸ªèŠ‚ç‚¹ï¼Œå¹¶ä¿å­˜å…¶å€¼
              {
                  sec_tail[0] = current->x;
                  sec_tail[1] = current->y;
@@ -308,7 +306,7 @@ typedef struct ac
          tail[0] = current->x;
          tail[1] = current->y;
 
-         //¸ù¾İÉßÎ²ÔË¶¯·½ÏòÌí¼Ó½Úµã
+         //æ ¹æ®è›‡å°¾è¿åŠ¨æ–¹å‘æ·»åŠ èŠ‚ç‚¹
          if (tail[0] > sec_tail[0])
          {
              end[0] = end[0] + 10;
@@ -336,7 +334,7 @@ typedef struct ac
      }
 
 
-     if (*nodemun == 1)//ÉßÖ»ÓĞÒ»¸ö½Úµã
+     if (*nodemun == 1)//è›‡åªæœ‰ä¸€ä¸ªèŠ‚ç‚¹
      {
          switch (move)
          {
@@ -380,10 +378,10 @@ typedef struct ac
  {
      int i;
      lianbiao* current;
-     if (nodemun >= 5)//ÉßÓĞ5¸ö½ÚµãÒÔÉÏ
+     if (nodemun >= 5)//è›‡æœ‰5ä¸ªèŠ‚ç‚¹ä»¥ä¸Š
      {
-         current = head->next->next->next->next;//currentÖ¸ÏòµÚ5¸ö½Úµã
-         for (i = 5; i <= nodemun; i++)//ÅĞ¶ÏÉßÊÇ·ñ³Ôµ½×Ô¼º
+         current = head->next->next->next->next;//currentæŒ‡å‘ç¬¬5ä¸ªèŠ‚ç‚¹
+         for (i = 5; i <= nodemun; i++)//åˆ¤æ–­è›‡æ˜¯å¦åƒåˆ°è‡ªå·±
          {
              if (head->x == current->x && head->y == current->y)
              {
@@ -393,7 +391,7 @@ typedef struct ac
              i++;
          }
      }
-     if (head->x < 0 || head->x>490 || head->y < 0 || head->y>390)//ÅĞ¶ÏÉßÉíÊÇ·ñ³¬³öÓÎÏ·½çÃæ
+     if (head->x < 0 || head->x>490 || head->y < 0 || head->y>390)//åˆ¤æ–­è›‡èº«æ˜¯å¦è¶…å‡ºæ¸¸æˆç•Œé¢
          return 0;
      return 1;
  }
@@ -404,9 +402,9 @@ typedef struct ac
      wchar_t ch[5];
      setfillcolor(BLACK);
      solidrectangle(0, 0, 850, 400);
-     setbkmode(TRANSPARENT);//ÉèÖÃ±³¾°Ä£Ê½
+     setbkmode(TRANSPARENT);//è®¾ç½®èƒŒæ™¯æ¨¡å¼
      settextcolor(RGB(0, 255, 255));
-     settextstyle(40, 0, _T("ËÎÌå"));
+     settextstyle(40, 0, _T("å®‹ä½“"));
      outtextxy(300, 100, _T(" game over!"));
      outtextxy(200, 200, _T(" your grade :     points"));
 
@@ -434,16 +432,16 @@ typedef struct ac
          {
              create(head, end);
              chose_speed(nodemun);
-             if (_kbhit())//»ñÈ¡Êó±ê²Ù×÷
+             if (_kbhit())//è·å–é¼ æ ‡æ“ä½œ
              {
                  _getch();
                  kb = _getch();
-                 //²»ÄÜÏòµ±Ç°ÉßÍ·ÒÆ¶¯·½ÏòµÄ·´·½ÏòÔË¶¯
+                 //ä¸èƒ½å‘å½“å‰è›‡å¤´ç§»åŠ¨æ–¹å‘çš„åæ–¹å‘è¿åŠ¨
                  if (!(kb == up && move == down || kb == down && move == up || kb == right && move == lift || kb == lift && move == right))
                      move = kb;
              }
              head = changeLink(head, end, nodemun);
-             if (check(head, nodemun) == 0)//ºÏ·¨ĞÔ¼ì²â
+             if (check(head, nodemun) == 0)//åˆæ³•æ€§æ£€æµ‹
                  break;
 
              if (head->x == position[0] && head->y == position[1])
